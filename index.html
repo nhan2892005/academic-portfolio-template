@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nguyễn Phúc Nhân | Researcher · Synergia Team</title>
+    <title>Nguyễn Phúc Nhân | Member · Synergia Research Team</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -36,7 +36,6 @@
 </head>
 <body class="antialiased selection:bg-blue-100 selection:text-navy">
 
-    <!-- ── Navigation ─────────────────────────────────────────────────── -->
     <nav id="main-nav">
         <div class="nav-inner">
             <div class="nav-brand" id="nav-name">
@@ -55,10 +54,12 @@
         <div id="mobile-menu" class="mobile-menu hidden"></div>
     </nav>
 
-    <!-- ── Main ───────────────────────────────────────────────────────── -->
     <main class="site-main" id="main-content"></main>
 
-    <!-- ── Footer ────────────────────────────────────────────────────── -->
+    <div id="imageModal" class="image-modal" onclick="closeImageModal()">
+        <img id="modalImg" class="image-modal-content">
+    </div>
+
     <footer class="site-footer">
         <div class="footer-inner">
             <p class="footer-name" id="footer-name"></p>

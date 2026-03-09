@@ -2,13 +2,25 @@ const portfolioData = {
     config: { theme: 'light' },
     basics: {
         name:    { vi: 'Nguyễn Phúc Nhân', en: 'Nhan Nguyen Phuc'},
-        label:   { vi: 'Cử nhân Khoa học Máy tính — HCMUT', en: 'Bachelor of Computer Science — HCMUT' },
-        picture: './images/profile.jpg',
-        email:   'phucnhan289@gmail.com',
-        summary: {
-            vi: 'Sinh viên Khoa học Máy tính tại HCMUT, nghiên cứu viên tại Synergia Research Team - HPC Lab. Quan tâm đến Green HPC, Reinforcement Learning, Big Data và phát triển phần mềm Full-Stack.',
-            en: 'Computer Science student at HCMUT, Research Assistant at the Synergia Research Team — HPC Lab. Passionate about Green HPC, Reinforcement Learning, Big Data, and Full-Stack software development.'
+        label: {
+            vi: 'Sinh viên Khoa học Máy tính · HCMUT \n Thành viên Nghiên cứu, Synergia Team — HPC Lab \n Thành viên ban Council, Big Data Club — HCMUT',
+            en: 'B.Sc. Computer Science, HCMUT \n Research Member, Synergia Team — HPC Lab \n Council Member, Big Data Club — HCMUT'
         },
+        role: {
+            vi: 'Thành viên · Synergia Research Team',
+            en: 'Member · Synergia Research Team'
+        },
+        picture: './images/profile.jpg',
+        email:   'nhan.nguyen2005phuyen@hcmut.edu.vn',
+        interests: [
+            'Deep Reinforcement Learning',
+            'Job Scheduling in HPC',
+            'Green HPC Systems',
+            'AI for Education',
+            'Adaptive & Personalized Learning',
+            'Big Data Systems',
+            'Multi-Objective Optimization'
+        ],
         socials: [
             { label: 'Google Scholar', url: 'https://scholar.google.com/citations?user=0jmPr2EAAAAJ&hl=vi', icon: 'fas fa-graduation-cap', color: 'text-gray-800 hover:text-black' },
             { label: 'ORCID',          url: 'https://orcid.org/0009-0009-7081-3940',                        icon: 'fab fa-orcid',          color: 'text-green-500 hover:text-green-900' },
@@ -54,15 +66,15 @@ const portfolioData = {
     ],
     experience: [
         {
-            company:     'AI for Education Team - Big Data Club',
+            company:     'AI for Education Team - Big Data Club — HCMUT',
             position:    { vi: 'Scrum Master & DevOps', en: 'Scrum Master & DevOps' },
             startDate:   'Dec 2025',
-            endDate:     'Ongoing',
+            endDate:     { vi: 'Hiện tại', en: 'Ongoing' },
             description: {
-                vi: 'Cố vấn kỹ thuật cho các đội thi về xử lý dữ liệu, thiết kế thuật toán và kiến trúc hệ thống trong thử thách Bus Router. Đánh giá giải pháp và đưa ra phản hồi chiến lược để các đội cải thiện mô hình và thuyết trình.',
-                en: 'Provided technical mentorship on data processing, algorithm design, and system architecture for the Bus Router challenge. Reviewed solutions and offered strategic feedback to help teams refine their models and presentations.'
+                vi: 'Dẫn dắt nhóm AI for Education xây dựng nền tảng học tập thông minh ứng dụng AI và Big Data. Đảm nhận vai trò Scrum Master: lập kế hoạch sprint, điều phối backlog và đảm bảo tiến độ phát triển. Phụ trách DevOps: thiết lập CI/CD pipeline, containerization và triển khai hệ thống. Hướng nghiên cứu tập trung vào GraphRAG, personalized learning và adaptive content delivery cho các nền tảng LMS.',
+                en: 'Leading the AI for Education team in building an intelligent learning platform powered by AI and Big Data. Serving as Scrum Master: sprint planning, backlog management, and delivery coordination. Handling DevOps responsibilities: CI/CD pipeline setup, containerization, and system deployment. Research focus on GraphRAG, personalized learning, and adaptive content delivery for LMS platforms.'
             },
-            tags: ['Software Development', 'EdTech', 'GraphRAG', 'AI Applications', 'Project Planning'],
+            tags: ['Scrum Master', 'DevOps', 'EdTech', 'GraphRAG', 'AI for Education', 'LMS', 'CI/CD'],
             logo: './images/logo/bdclogo.png'
         },
         {
@@ -71,26 +83,26 @@ const portfolioData = {
             startDate:   'Sep 2024',
             endDate:     { vi: 'Hiện tại', en: 'Ongoing' },
             description: {
-                vi: 'Nghiên cứu các thuật toán lập lịch dựa trên Reinforcement Learning cho hệ thống HPC, tập trung tối ưu hóa phân bổ tài nguyên và hiệu quả năng lượng. Thiết kế simulation framework, thực nghiệm trên multi-node cluster và đóng góp vào công bố khoa học quốc tế.',
-                en: 'Researched RL-based job scheduling algorithms for HPC systems, focusing on resource allocation optimization and energy efficiency. Designed simulation frameworks, conducted multi-node cluster experiments, and contributed to international scientific publications.'
+                vi: 'Nghiên cứu các thuật toán lập lịch công việc dựa trên Deep Reinforcement Learning cho hệ thống HPC, tập trung vào tối ưu hóa đa mục tiêu: hiệu quả phân bổ tài nguyên, tiết kiệm năng lượng và ưu tiên năng lượng tái tạo hướng tới Green HPC. Thiết kế simulation framework để đánh giá hiệu năng scheduler trên môi trường multi-node cluster. Đóng góp vào công bố khoa học.',
+                en: 'Conducting research on Deep Reinforcement Learning-based job scheduling for HPC systems, with a focus on multi-objective optimization: resource allocation efficiency, energy reduction, and renewable energy prioritization toward Green HPC. Designed simulation frameworks to benchmark scheduler performance on multi-node cluster environments. Contribute to publications.'
             },
-            tags: ['Reinforcement Learning', 'HPC', 'Python', 'Agile/Scrum', 'Research'],
+            tags: ['Deep Reinforcement Learning', 'HPC', 'Green Scheduling', 'Simulation', 'Research', 'Python'],
             logo: './images/logo/synergia.png'
         },
         {
             company:     'Big Data Club — HCMUT',
-            position:    { vi: 'Ban Truyền thông & Thiết kế', en: 'Media Design Team' },
+            position:    { vi: 'Ban Chấp hành & Ban Truyền thông', en: 'Council Member & Media Design Team' },
             startDate:   'Sep 2024',
             endDate:     { vi: 'Hiện tại', en: 'Ongoing' },
             description: {
-                vi: 'Phát triển và duy trì tài sản trực quan cho fanpage câu lạc bộ: banner, bài đăng và thông báo sự kiện. Thiết kế merchandise cho thành viên và quản lý hình ảnh cho các sự kiện học thuật, hội thảo và workshop.',
-                en: 'Developed and maintained visual assets for the club fanpage including banners, posts, and event announcements. Designed member merchandise and managed event imagery for academic seminars, kick-off sessions, and training workshops.'
+                vi: 'Là thành viên Ban Chấp hành Big Data Club — HCMUT, tham gia định hướng hoạt động học thuật và cộng đồng của câu lạc bộ. Đồng thời phụ trách Ban Truyền thông & Thiết kế: xây dựng và duy trì tài sản hình ảnh cho fanpage, thiết kế banner, bài đăng sự kiện và merchandise. Tổ chức và hỗ trợ các hoạt động học thuật, hội thảo kỹ thuật và sự kiện nội bộ.',
+                en: 'Serving as a Council Member of Big Data Club — HCMUT, contributing to the academic and community direction of the club. Simultaneously part of the Media & Design team: developing and maintaining visual assets for the fanpage including banners, event posts, and merchandise. Organized and facilitated academic seminars, technical workshops, and internal club events.'
             },
-            tags: ['Design', 'Branding', 'Event Management', 'Visual Assets'],
+            tags: ['Leadership', 'Big Data', 'Event Management', 'Design', 'Community'],
             logo: './images/logo/bdclogo.png'
         },
         {
-            company:     { vi: 'Lớp MT23KHM3 — Khoa KHMT & KT — HCMUT', en: 'Class MT23KHM3 — Faculty of CS & Engineering — HCMUT' },
+            company:     { vi: 'Lớp MT23KHM3 — Khoa KHMT & KT — HCMUT', en: 'Class MT23KHM3 — Faculty of Computer Science and Engineering — HCMUT' },
             position:    { vi: 'Bí thư Chi đoàn', en: 'Secretary of the Youth Union Branch' },
             startDate:   'Dec 2023',
             endDate:     { vi: 'Hiện tại', en: 'Ongoing' },
@@ -181,11 +193,23 @@ const portfolioData = {
             date:      'November 2025',
             url:       'https://doi.org/10.1007/978-981-95-4960-3_33',
             description: {
-                vi: 'Thanh Hoang Le Hai, Nhan Nguyen Phuc, Mai Nguyen Tran Phuong, Minh Bui Ngoc, Nam Thoai. Đề xuất bộ lập lịch DRL nhận thức chi phí cho các trung tâm HPC kết hợp năng lượng tái tạo, giúp giảm chi phí và dấu chân carbon bằng cách căn chỉnh thực thi công việc với nguồn cung năng lượng tái tạo.',
+                vi: 'Hoàng Lê Hải Thanh, Nguyễn Phúc Nhân, Nguyễn Trần Phương Mai, Bùi Ngọc Minh, Thoại Nam. Đề xuất bộ lập lịch DRL nhận thức chi phí cho các trung tâm HPC kết hợp năng lượng tái tạo, giúp giảm chi phí và dấu chân carbon bằng cách căn chỉnh thực thi công việc với nguồn cung năng lượng tái tạo.',
                 en: 'Thanh Hoang Le Hai, Nhan Nguyen Phuc, Mai Nguyen Tran Phuong, Minh Bui Ngoc, Nam Thoai. Proposes a cost-aware DRL scheduler for hybrid-powered HPC centers that decouples job selection from delay, reducing operational costs and carbon footprint by aligning execution with renewable energy supply.'
             },
             tags:  ['High Performance Computing', 'Job Scheduling', 'Green-Aware Scheduling', 'Reinforcement Learning', 'Multi-objective RL'],
             image: './images/miwai2025.png'
+        },
+        {
+            title:     'A New Approach to Transformer-based State Encoding for Deep Reinforcement Learning Scheduling in Sustainable HPC Systems',
+            publisher: 'AMITA-IEA/AIE 2026 — 39th International Conference on Industrial, Engineering & Other Applications of Applied Intelligent Systems.',
+            date:      '',
+            url:       '',
+            description: {
+                vi: 'Nguyễn Phúc Nhân, Bùi Ngọc Minh, Nguyễn Trần Phương Mai, Hoàng Lê Hải Thanh, Thoai Nam. Đề xuất bộ lập lịch DRL nhận thức chi phí cho các trung tâm HPC kết hợp năng lượng tái tạo, giúp giảm chi phí và dấu chân carbon bằng cách căn chỉnh thực thi công việc với nguồn cung năng lượng tái tạo.',
+                en: 'Nhan Nguyen Phuc, Minh Bui Ngoc, Mai Nguyen Tran Phuong, Thanh Hoang Le Hai, Nam Thoai.'
+            },
+            tags:  ['High Performance Computing', 'Job Scheduling', 'Transformer Models', 'Reinforcement Learning', 'Semantic Representations', 'Green Computing'],
+            image: './images/amita2026.png'
         }
     ],
     awards: [
@@ -255,7 +279,7 @@ const portfolioData = {
             date:        '2023–2024 & 2024–2025',
             icon:        'fas fa-medal text-yellow-500',
             description: {
-                vi: 'Ghi nhận thành tích học tập xuất sắc toàn diện liên tục 2 năm học 2023–2024 và 2024–2025 tại Trường Đại học Bách Khoa TP.HCM.',
+                vi: 'Ghi nhận thành tích học tập giỏi toàn diện liên tục 2 năm học 2023–2024 và 2024–2025 tại Trường Đại học Bách Khoa TP.HCM.',
                 en: 'Awarded for outstanding academic performance across all subjects for two consecutive years (2023–2024 and 2024–2025) at Ho Chi Minh City University of Technology.'
             }
         }
@@ -276,20 +300,26 @@ const portfolioData = {
     ],
     researchDirections: [
         {
-            title: { vi: 'Tính toán Hiệu năng Cao Xanh (Green HPC)', en: 'Green High-Performance Computing' },
-            description: {
-                vi: 'Nghiên cứu tối ưu hóa lập lịch công việc trong hệ thống HPC bằng Deep Reinforcement Learning để giảm chi phí vận hành, dấu chân carbon và ưu tiên sử dụng năng lượng tái tạo.',
-                en: 'Research on optimizing job scheduling in HPC systems using Deep Reinforcement Learning to reduce operational costs, carbon footprint, and prioritize the use of renewable energy.'
+            title: {
+                vi: 'Lập lịch Công việc bằng Deep Reinforcement Learning cho Green HPC',
+                en: 'DRL-based Job Scheduling for Green High-Performance Computing'
             },
-            tags: ['Green Scheduling', 'Energy Efficiency', 'HPC Optimization', 'Sustainable Computing', 'DRL']
+            description: {
+                vi: 'Nghiên cứu các giải pháp lập lịch công việc (job scheduling) dựa trên Deep Reinforcement Learning nhằm cải thiện hiệu suất và tính bền vững của hệ thống HPC. Trọng tâm là xây dựng các bộ lập lịch thông minh có khả năng đồng thời tối ưu hóa nhiều mục tiêu: tối thiểu hóa chi phí vận hành, giảm tiêu thụ năng lượng, ưu tiên sử dụng năng lượng tái tạo và giảm phát thải carbon. Hướng nghiên cứu hướng tới Green HPC — một mô hình tính toán hiệu năng cao thân thiện với môi trường, phù hợp với bối cảnh các trung tâm dữ liệu hiện đại đang chịu áp lực ngày càng tăng về hiệu quả năng lượng và trung hòa carbon.',
+                en: 'Investigating Deep Reinforcement Learning solutions for job scheduling in HPC environments, targeting both system performance and long-term sustainability. The core focus is on developing intelligent schedulers capable of jointly optimizing multiple objectives: minimizing operational cost, reducing energy consumption, maximizing renewable energy utilization, and lowering carbon emissions. This direction contributes to the Green HPC paradigm — a model of high-performance computing aligned with the growing demands for energy efficiency and carbon neutrality in modern data centers.'
+            },
+            tags: ['Deep Reinforcement Learning', 'Job Scheduling', 'Green HPC', 'Energy Efficiency', 'Multi-objective Optimization', 'Sustainable Computing']
         },
         {
-            title: { vi: 'Machine Learning & Hệ thống Big Data', en: 'Machine Learning & Big Data Systems' },
-            description: {
-                vi: 'Khám phá các kỹ thuật machine learning tiên tiến cho xử lý và phân tích dữ liệu lớn, tối ưu hóa hiệu suất của các hệ thống phân tán.',
-                en: 'Exploring advanced machine learning techniques for processing and analyzing large-scale data, and optimizing the performance of distributed systems.'
+            title: {
+                vi: 'AI & Big Data cho Nền tảng Học tập Thích ứng (LMS)',
+                en: 'AI & Big Data for Adaptive Learning Management Systems'
             },
-            tags: ['Machine Learning', 'Big Data', 'Distributed Systems', 'Data Analytics', 'NLP']
+            description: {
+                vi: 'Nghiên cứu ứng dụng AI và Big Data để cải thiện các nền tảng quản lý học tập (LMS) theo ba hướng cốt lõi: (1) Personalized Learning — xây dựng lộ trình học tập cá nhân hóa dựa trên hành vi, năng lực và mục tiêu của từng người học; (2) Micro-learning — thiết kế và phân phối nội dung học tập được chia nhỏ, tối ưu hóa cho khả năng tiếp thu và ghi nhớ ngắn hạn; (3) Adaptive Learning — phát triển hệ thống tự động điều chỉnh nội dung, độ khó và phương pháp giảng dạy theo tiến trình học thực tế. Mục tiêu là xây dựng nền tảng LMS thế hệ mới giúp nâng cao hiệu suất giáo dục, tăng tỷ lệ hoàn thành và cải thiện chất lượng học tập một cách toàn diện.',
+                en: 'Exploring the integration of AI and Big Data to enhance Learning Management Systems (LMS) across three core dimensions: (1) Personalized Learning — constructing individualized learning pathways based on each learner\'s behavior, competency profile, and objectives; (2) Micro-learning — designing and delivering granular learning units optimized for short-term retention and comprehension; (3) Adaptive Learning — developing systems that dynamically adjust content, difficulty, and pedagogy in response to real-time learner progress. The overarching goal is to engineer a next-generation LMS that measurably improves educational outcomes, course completion rates, and overall learning quality.'
+            },
+            tags: ['AI for Education', 'Personalized Learning', 'Micro-learning', 'Adaptive Learning', 'LMS', 'Big Data', 'Recommender Systems', 'EdTech']
         }
     ]
 };

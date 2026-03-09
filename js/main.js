@@ -11,9 +11,9 @@ function buildPortfolio(data) {
         renderPublications(data.publications),
         renderExperience(data.experience),
         renderActivities(data.activities),
-        renderProjects(data.projects),
-        renderAwards(data.awards),
         renderEducation(data.education),
+        renderAwards(data.awards),
+        //renderProjects(data.projects),
         renderTerminal()
     ].join('');
 
@@ -27,6 +27,7 @@ function buildPortfolio(data) {
 
     window.scrollTo(0, scrollY);
     initTerminal(data);
+    requestAnimationFrame(() => initExpandables());
 }
 document.getElementById('mobile-menu-btn').addEventListener('click', () => {
     document.getElementById('mobile-menu').classList.toggle('hidden');

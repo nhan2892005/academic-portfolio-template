@@ -1,3 +1,14 @@
+function expandDesc(text, extraClass = '') {
+    const moreLabel = currentLang === 'vi' ? 'Xem thêm' : 'Read more';
+    const lessLabel = currentLang === 'vi' ? 'Thu gọn'  : 'Collapse';
+    return `<div class="text-expandable ${extraClass}">${escapeHTML(text)}</div>` +
+           `<button class="read-more-btn" aria-expanded="false"` +
+           ` data-more="${escapeHTML(moreLabel)}" data-less="${escapeHTML(lessLabel)}">` +
+           `<span class="rmb-label">${escapeHTML(moreLabel)}</span>` +
+           `<span class="rmb-chevron">▾</span>` +
+           `</button>`;
+}
+
 function sectionHead(label, title) {
     return `<div class="acad-section-head">
         <span class="acad-section-label">${label}</span>
@@ -10,9 +21,7 @@ function renderHeader(data) {
 
     const shortName = d(data.name).split(' ').pop(); // last name
     document.getElementById('nav-name').innerHTML =
-        `<span class="nav-initials">${d(data.name).split(' ').map(w => w[0]).slice(-2).join('')}</span>
-         <span class="nav-sep">·</span>
-         <span class="nav-title-text">${escapeHTML(d(data.label).split('·')[0].trim())}</span>`;
+        `<span class="nav-initials">${d(data.name).split(' ').map(w => w[0]).slice(-2).join('')}</span>`;
 
     document.getElementById('footer-name').innerText = d(data.name);
 
@@ -40,7 +49,6 @@ function renderHeader(data) {
             <p class="hero-welcome">${t('welcome')}</p>
             <h1 class="hero-name">${escapeHTML(d(data.name))}</h1>
             <p class="hero-label">${escapeHTML(d(data.label))}</p>
-            <p class="hero-summary">${escapeHTML(d(data.summary))}</p>
             ${interestsHTML ? `<div class="hero-interests">${interestsHTML}</div>` : ''}
             <div class="hero-links">${linksHTML}</div>
         </div>
@@ -54,7 +62,7 @@ function renderResearchDirections(data) {
     const cardsHTML = data.map(dir => `
         <div class="research-card">
             <div class="research-card-title">${escapeHTML(d(dir.title))}</div>
-            <div class="research-card-desc">${escapeHTML(d(dir.description))}</div>
+            ${expandDesc(d(dir.description), 'research-card-desc')}
             <div class="research-tags">
                 ${dir.tags.map(tag => `<span class="research-tag">${escapeHTML(tag)}</span>`).join('')}
             </div>
@@ -63,7 +71,7 @@ function renderResearchDirections(data) {
     return `
     <section id="research-directions" class="mb-14 scroll-mt">
         ${sectionHead('Research', t('research'))}
-        <div class="research-grid">${cardsHTML}</div>
+        <div class="research-row">${cardsHTML}</div>
     </section>`;
 }
 
@@ -74,7 +82,14 @@ function renderPublications(data) {
     const pubHTML = data.map((pub, i) => `
         <div class="pub-entry">
             <div class="pub-num">[${i + 1}]</div>
-            ${pub.image ? `<img src="${escapeHTML(pub.image)}" alt="${escapeHTML(pub.title)}" class="pub-thumb">` : ''}
+            ${pub.image ? `
+                <img 
+                    src="${escapeHTML(pub.image)}" 
+                    alt="${escapeHTML(pub.title)}" 
+                    class="pub-thumb"
+                    onclick="openImageModal('${escapeHTML(pub.image)}')"
+                >` : ''
+            }
             <div class="pub-body">
                 <div class="pub-venue-row">
                     <span class="pub-venue">${escapeHTML(pub.publisher.split(' ')[0])}</span>
@@ -82,7 +97,7 @@ function renderPublications(data) {
                 </div>
                 <div class="pub-title">${escapeHTML(pub.title)}</div>
                 <div class="pub-publisher">${escapeHTML(pub.publisher)}</div>
-                ${pub.description ? `<div class="pub-desc">${escapeHTML(d(pub.description))}</div>` : ''}
+                ${pub.description ? expandDesc(d(pub.description), 'pub-desc') : ''}
                 ${pub.tags && pub.tags.length > 0 ? `
                 <div class="pub-tags">
                     ${pub.tags.map(tag => `<span class="pub-tag">${escapeHTML(tag)}</span>`).join('')}
@@ -132,14 +147,14 @@ function renderExperience(data) {
             ? d(job.endDate) : (job.endDate || t('ongoing'));
         return `
         <div class="exp-entry">
-            <div class="exp-date">${escapeHTML(job.startDate)}<br>— ${escapeHTML(endStr)}</div>
+            <div class="exp-date">${escapeHTML(job.startDate)} — ${escapeHTML(endStr)}</div>
             <div class="exp-body">
                 ${job.logo
                     ? `<img src="${escapeHTML(job.logo)}" alt="${escapeHTML(d(job.company))}" class="exp-logo">`
                     : `<div class="exp-logo-placeholder"><i class="fas fa-building"></i></div>`}
                 <div class="exp-role">${escapeHTML(d(job.position))}</div>
                 <div class="exp-company">${escapeHTML(d(job.company))}</div>
-                <div class="exp-desc">${escapeHTML(d(job.description))}</div>
+                ${expandDesc(d(job.description), 'exp-desc')}
                 ${job.tags ? `<div class="exp-tags">${job.tags.map(t2 =>
                     `<span class="exp-tag">${escapeHTML(t2)}</span>`).join('')}</div>` : ''}
             </div>
@@ -172,7 +187,7 @@ function renderActivities(data) {
                 </div>
                 <div class="act-date">${escapeHTML(item.startDate)}–${escapeHTML(endStr)}</div>
             </div>
-            <div class="act-desc">${escapeHTML(d(item.description))}</div>
+            ${expandDesc(d(item.description), 'act-desc')}
             ${item.tags ? `<div class="act-tags">${item.tags.map(t2 =>
                 `<span class="act-tag">${escapeHTML(t2)}</span>`).join('')}</div>` : ''}
         </div>`;
@@ -181,7 +196,7 @@ function renderActivities(data) {
     return `
     <section id="hoat-dong" class="mb-14 scroll-mt">
         ${sectionHead('Activities', t('activities'))}
-        <div class="act-grid">${actHTML}</div>
+        <div class="act-row">${actHTML}</div>
     </section>`;
 }
 
@@ -194,7 +209,7 @@ function renderProjects(data) {
             <img src="${escapeHTML(proj.image)}" alt="${escapeHTML(proj.name)}" class="proj-thumb">
             <div class="proj-body">
                 <div class="proj-name">${escapeHTML(proj.name)}</div>
-                <div class="proj-desc">${escapeHTML(d(proj.description))}</div>
+                ${expandDesc(d(proj.description), 'proj-desc')}
                 <div class="proj-techs">
                     ${proj.technologies.map(t2 => `<span class="proj-tech">${escapeHTML(t2)}</span>`).join('')}
                 </div>
