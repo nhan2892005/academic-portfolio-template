@@ -14,7 +14,7 @@ function buildPortfolio(data) {
         renderEducation(data.education),
         renderAwards(data.awards),
         //renderProjects(data.projects),
-        renderTerminal()
+        //renderTerminal()
     ].join('');
 
     const navLinksEl   = document.getElementById('nav-links');

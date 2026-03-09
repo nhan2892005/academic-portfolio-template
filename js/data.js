@@ -3,8 +3,8 @@ const portfolioData = {
     basics: {
         name:    { vi: 'Nguyễn Phúc Nhân', en: 'Nhan Nguyen Phuc'},
         label: {
-            vi: 'Sinh viên Khoa học Máy tính · HCMUT \n Thành viên Nghiên cứu, Synergia Team — HPC Lab \n Thành viên ban Council, Big Data Club — HCMUT',
-            en: 'B.Sc. Computer Science, HCMUT \n Research Member, Synergia Team — HPC Lab \n Council Member, Big Data Club — HCMUT'
+            vi: 'Sinh viên Khoa học Máy tính • HCMUT \n Thành viên Nghiên cứu • Synergia Team — HPC Lab \n Thành viên ban Council • Big Data Club — HCMUT',
+            en: 'B.Sc. Computer Science  • HCMUT \n Research Member • Synergia Team — HPC Lab \n Council Member • Big Data Club — HCMUT'
         },
         role: {
             vi: 'Thành viên · Synergia Research Team',
@@ -205,7 +205,7 @@ const portfolioData = {
             date:      '',
             url:       '',
             description: {
-                vi: 'Nguyễn Phúc Nhân, Bùi Ngọc Minh, Nguyễn Trần Phương Mai, Hoàng Lê Hải Thanh, Thoai Nam. Đề xuất bộ lập lịch DRL nhận thức chi phí cho các trung tâm HPC kết hợp năng lượng tái tạo, giúp giảm chi phí và dấu chân carbon bằng cách căn chỉnh thực thi công việc với nguồn cung năng lượng tái tạo.',
+                vi: 'Nguyễn Phúc Nhân, Bùi Ngọc Minh, Nguyễn Trần Phương Mai, Hoàng Lê Hải Thanh, Thoai Nam.',
                 en: 'Nhan Nguyen Phuc, Minh Bui Ngoc, Mai Nguyen Tran Phuong, Thanh Hoang Le Hai, Nam Thoai.'
             },
             tags:  ['High Performance Computing', 'Job Scheduling', 'Transformer Models', 'Reinforcement Learning', 'Semantic Representations', 'Green Computing'],
@@ -316,8 +316,8 @@ const portfolioData = {
                 en: 'AI & Big Data for Adaptive Learning Management Systems'
             },
             description: {
-                vi: 'Nghiên cứu ứng dụng AI và Big Data để cải thiện các nền tảng quản lý học tập (LMS) theo ba hướng cốt lõi: (1) Personalized Learning — xây dựng lộ trình học tập cá nhân hóa dựa trên hành vi, năng lực và mục tiêu của từng người học; (2) Micro-learning — thiết kế và phân phối nội dung học tập được chia nhỏ, tối ưu hóa cho khả năng tiếp thu và ghi nhớ ngắn hạn; (3) Adaptive Learning — phát triển hệ thống tự động điều chỉnh nội dung, độ khó và phương pháp giảng dạy theo tiến trình học thực tế. Mục tiêu là xây dựng nền tảng LMS thế hệ mới giúp nâng cao hiệu suất giáo dục, tăng tỷ lệ hoàn thành và cải thiện chất lượng học tập một cách toàn diện.',
-                en: 'Exploring the integration of AI and Big Data to enhance Learning Management Systems (LMS) across three core dimensions: (1) Personalized Learning — constructing individualized learning pathways based on each learner\'s behavior, competency profile, and objectives; (2) Micro-learning — designing and delivering granular learning units optimized for short-term retention and comprehension; (3) Adaptive Learning — developing systems that dynamically adjust content, difficulty, and pedagogy in response to real-time learner progress. The overarching goal is to engineer a next-generation LMS that measurably improves educational outcomes, course completion rates, and overall learning quality.'
+                vi: 'Nghiên cứu ứng dụng AI và Big Data để cải thiện các nền tảng quản lý học tập (LMS) theo ba hướng cốt lõi: \n(1) Personalized Learning — xây dựng lộ trình học tập cá nhân hóa dựa trên hành vi, năng lực và mục tiêu của từng người học; \n(2) Micro-learning — thiết kế và phân phối nội dung học tập được chia nhỏ, tối ưu hóa cho khả năng tiếp thu và ghi nhớ ngắn hạn; \n(3) Adaptive Learning — phát triển hệ thống tự động điều chỉnh nội dung, độ khó và phương pháp giảng dạy theo tiến trình học thực tế. Mục tiêu là xây dựng nền tảng LMS thế hệ mới giúp nâng cao hiệu suất giáo dục, tăng tỷ lệ hoàn thành và cải thiện chất lượng học tập một cách toàn diện.',
+                en: 'Exploring the integration of AI and Big Data to enhance Learning Management Systems (LMS) across three core dimensions: \n(1) Personalized Learning — constructing individualized learning pathways based on each learner\'s behavior, competency profile, and objectives; \n(2) Micro-learning — designing and delivering granular learning units optimized for short-term retention and comprehension; \n(3) Adaptive Learning — developing systems that dynamically adjust content, difficulty, and pedagogy in response to real-time learner progress. The overarching goal is to engineer a next-generation LMS that measurably improves educational outcomes, course completion rates, and overall learning quality.'
             },
             tags: ['AI for Education', 'Personalized Learning', 'Micro-learning', 'Adaptive Learning', 'LMS', 'Big Data', 'Recommender Systems', 'EdTech']
         }
