@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scholar Profile & Academic Website · Synergia Workshop</title>
+  <link rel="stylesheet" href="slide.css" />
+</head>
+<body>
+
+<!-- ── Ambient background ──────────────────────────────────────────────── -->
+<canvas id="bg-canvas"></canvas>
+<div class="orb orb-1"></div>
+<div class="orb orb-2"></div>
+<div class="orb orb-3"></div>
+
+<!-- ── Presentation shell ─────────────────────────────────────────────── -->
+<div id="presentation">
+
+  <!-- Progress -->
+  <div id="progress-track">
+    <div id="progress-bar"></div>
+  </div>
+
+  <!-- Deck -->
+  <div id="deck"></div>
+
+  <!-- Controls -->
+  <div id="controls">
+    <div class="ctrl-side">
+      <button class="ctrl-btn" id="btn-prev" title="Slide trước (←)">
+        <svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+      <span id="slide-counter">1 / 13</span>
+    </div>
+
+    <div id="dot-nav"></div>
+
+    <div class="ctrl-side ctrl-side-right">
+      <button class="ctrl-btn" id="btn-fullscreen" title="Fullscreen">
+        <svg viewBox="0 0 24 24">
+          <path d="M8 3H5a2 2 0 00-2 2v3m18 0V5a2 2 0 00-2-2h-3m0 18h3a2 2 0 002-2v-3M3 16v3a2 2 0 002 2h3"/>
+        </svg>
+      </button>
+      <button class="ctrl-btn" id="btn-next" title="Slide tiếp (→)">
+        <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ── Keyboard shortcuts (press ?) ───────────────────────────────────── -->
+<div id="shortcut-overlay">
+  <div class="shortcut-box">
+    <h3>⌨️ Phím tắt</h3>
+    <div class="shortcut-row"><kbd>→</kbd> / <kbd>Space</kbd> <span>Slide tiếp theo</span></div>
+    <div class="shortcut-row"><kbd>←</kbd>                   <span>Slide trước</span></div>
+    <div class="shortcut-row"><kbd>Home</kbd>                <span>Slide đầu tiên</span></div>
+    <div class="shortcut-row"><kbd>End</kbd>                 <span>Slide cuối</span></div>
+    <div class="shortcut-row"><kbd>1</kbd>–<kbd>9</kbd>      <span>Nhảy đến slide N</span></div>
+    <div class="shortcut-row"><kbd>?</kbd>                   <span>Bật/tắt overlay này</span></div>
+    <div class="shortcut-close">Click bất kỳ để đóng · Esc để thoát</div>
+  </div>
+</div>
+
+<!-- ── Scripts ─────────────────────────────────────────────────────────── -->
+<script src="slidejs/data.js"></script>
+<script src="slidejs/nav.js"></script>
+<script src="slidejs/fx.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nguyễn Phúc Nhân | Researcher · Synergia Team</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['Lora', 'Georgia', 'serif'],
+                        sans:  ['DM Sans', 'sans-serif'],
+                        mono:  ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        ink:     '#1a1f2e',
+                        navy:    '#1e3a5f',
+                        slate:   '#4a5568',
+                        muted:   '#718096',
+                        rule:    '#e2e8f0',
+                        cream:   '#faf9f6',
+                        primary: '#1e3a5f',
+                        accent:  '#c8914a',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="antialiased selection:bg-blue-100 selection:text-navy">
+
+    <!-- ── Navigation ─────────────────────────────────────────────────── -->
+    <nav id="main-nav">
+        <div class="nav-inner">
+            <div class="nav-brand" id="nav-name">
+                <span class="nav-initials">NPN</span>
+                <span class="nav-sep">·</span>
+                <span class="nav-title-text">Researcher</span>
+            </div>
+
+            <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <div class="nav-links-wrap" id="nav-links"></div>
+        </div>
+
+        <div id="mobile-menu" class="mobile-menu hidden"></div>
+    </nav>
+
+    <!-- ── Main ───────────────────────────────────────────────────────── -->
+    <main class="site-main" id="main-content"></main>
+
+    <!-- ── Footer ────────────────────────────────────────────────────── -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <p class="footer-name" id="footer-name"></p>
+            <div class="footer-socials" id="footer-socials"></div>
+            <p class="footer-copy">
+                © <span id="current-year"></span> Synergia Research Team · HCMUT
+            </p>
+        </div>
+    </footer>
+
+    <script src="js/translations.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/renders.js"></script>
+    <script src="js/terminal.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
