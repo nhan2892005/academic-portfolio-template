@@ -46,7 +46,6 @@ function renderHeader(data) {
             <span class="hero-photo-badge">${escapeHTML(d(data.role || 'Researcher'))}</span>
         </div>
         <div class="hero-content">
-            <p class="hero-welcome">${t('welcome')}</p>
             <h1 class="hero-name">${escapeHTML(d(data.name))}</h1>
             <p class="hero-label">${escapeHTML(d(data.label))}</p>
             ${interestsHTML ? `<div class="hero-interests">${interestsHTML}</div>` : ''}

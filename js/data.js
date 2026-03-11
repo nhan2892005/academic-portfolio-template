@@ -193,8 +193,8 @@ const portfolioData = {
             date:      'November 2025',
             url:       'https://doi.org/10.1007/978-981-95-4960-3_33',
             description: {
-                vi: 'Hoàng Lê Hải Thanh, Nguyễn Phúc Nhân, Nguyễn Trần Phương Mai, Bùi Ngọc Minh, Thoại Nam. Đề xuất bộ lập lịch DRL nhận thức chi phí cho các trung tâm HPC kết hợp năng lượng tái tạo, giúp giảm chi phí và dấu chân carbon bằng cách căn chỉnh thực thi công việc với nguồn cung năng lượng tái tạo.',
-                en: 'Thanh Hoang Le Hai, Nhan Nguyen Phuc, Mai Nguyen Tran Phuong, Minh Bui Ngoc, Nam Thoai. Proposes a cost-aware DRL scheduler for hybrid-powered HPC centers that decouples job selection from delay, reducing operational costs and carbon footprint by aligning execution with renewable energy supply.'
+                vi: 'Hoàng Lê Hải Thanh, Nguyễn Phúc Nhân, Nguyễn Trần Phương Mai, Bùi Ngọc Minh, Thoại Nam.',
+                en: 'Thanh Hoang Le Hai, Nhan Nguyen Phuc, Mai Nguyen Tran Phuong, Minh Bui Ngoc, Nam Thoai.'
             },
             tags:  ['High Performance Computing', 'Job Scheduling', 'Green-Aware Scheduling', 'Reinforcement Learning', 'Multi-objective RL'],
             image: './images/miwai2025.png'
